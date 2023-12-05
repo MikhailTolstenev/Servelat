@@ -13,6 +13,7 @@ public class PostController {
   private final PostService service;
 
   public PostController(PostService service) {
+
     this.service = service;
   }
 
@@ -43,7 +44,6 @@ public class PostController {
   }
 
   public void removeById(long id, HttpServletResponse response) {
-    // TODO: deserialize request & serialize response
     service.removeById(id);
     response.setStatus(HttpServletResponse.SC_OK);
   }
